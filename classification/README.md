@@ -1,6 +1,6 @@
 # Análise e Predição de Aprovação de Empréstimos
 
-Projeto de **Machine Learning aplicado à concessão de crédito**, com foco em identificar os fatores que influenciam a aprovação de empréstimos e comparar diferentes modelos de classificação.
+Este projeto tem como propósito demonstrar, de forma aplicada, o processo completo de modelagem preditiva, desde a preparação dos dados e exploração inicial até o ajuste, avaliação e interpretação de diferentes algoritmos de classificação. O foco está em comparar o desempenho de modelos clássicos e modernos, como Regressão Logística, SVM e Random Forest, avaliando sua capacidade de generalização, calibragem probabilística e equilíbrio entre precisão e sensibilidade.
 
 ---
 
@@ -139,15 +139,6 @@ O modelo combina múltiplas dimensões de risco, sem depender apenas da renda.
 
 **Melhor modelo final:** `Random Forest`  
 **AUC = 0.96**, **F1 = 0.91**, **generalização excelente**  
-
----
-
-## 13. Próximos Passos
-
-- Aplicar **SMOTE** ou `class_weight='balanced'` para lidar com o desbalanceamento.  
-- Testar **XGBoost ou LightGBM** para comparação.  
-- Implementar **explicabilidade local (SHAP values)**.  
-- Deploy em API (Flask/FastAPI) para uso real.
 
 ---
 
