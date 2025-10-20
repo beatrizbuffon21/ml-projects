@@ -80,7 +80,7 @@ Cada modelo foi avaliado em termos de acurácia, precisão, recall, F1-score, AU
 |--------|-----------|-----------|--------|----|-------------|
 | **Regressão Logística** | 0.84 | 0.81 | 0.66 | 0.73 | Boa explicabilidade, leve perda de recall. |
 | **SVM (RBF)** | 0.83 | 0.85 | 0.58 | 0.69 | Conservador, evita falsos positivos. |
-| **Random Forest** | 🥇 0.90 | 0.88 | 0.80 | 0.84 | Melhor equilíbrio geral, robusto e não linear. |
+| **Random Forest** | 0.90 | 0.88 | 0.80 | 0.84 | Melhor equilíbrio geral, robusto e não linear. |
 
 ---
 
@@ -88,11 +88,11 @@ Cada modelo foi avaliado em termos de acurácia, precisão, recall, F1-score, AU
 
 | Métrica | Regressão Logística | SVM | Random Forest |
 |----------|----------------------|-----|----------------|
-| **AUC (ROC)** | 0.91 | 0.93 | 🥇 0.96 |
-| **F1-score** | 0.78 | 0.80 | 🥇 0.91 |
-| **Precisão (1)** | 0.76 | 0.73 | 🥇 0.85 |
-| **Recall (1)** | 0.80 | 0.89 | 🥇 0.98 |
-| **Brier Score** | 0.115 | 0.105 | 🥇 0.082 |
+| **AUC (ROC)** | 0.91 | 0.93 | 0.96 |
+| **F1-score** | 0.78 | 0.80 | 0.91 |
+| **Precisão (1)** | 0.76 | 0.73 | 0.85 |
+| **Recall (1)** | 0.80 | 0.89 | 0.98 |
+| **Brier Score** | 0.115 | 0.105 | 0.082 |
 
 🔹 **Random Forest** → melhor performance global  
 🔹 **Regressão Logística** → melhor calibração  
@@ -133,7 +133,7 @@ O modelo combina múltiplas dimensões de risco, sem depender apenas da renda.
 
 | Objetivo | Modelo Ideal | Motivo |
 |-----------|---------------|--------|
-| **Alta performance preditiva** | 🥇 **Random Forest** | Melhor AUC, F1 e Recall |
+| **Alta performance preditiva** | **Random Forest** | Melhor AUC, F1 e Recall |
 | **Explicabilidade e análise de risco** | **Regressão Logística** | Calibração e interpretabilidade |
 | **Triagem ampla (sensível)** | **SVM** | Recall elevado, cauteloso na aprovação |
 
