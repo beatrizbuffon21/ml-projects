@@ -1,10 +1,10 @@
-# 🏦 Análise e Predição de Aprovação de Empréstimos
+# Análise e Predição de Aprovação de Empréstimos
 
 Projeto de **Machine Learning aplicado à concessão de crédito**, com foco em identificar os fatores que influenciam a aprovação de empréstimos e comparar diferentes modelos de classificação.
 
 ---
 
-## 📊 1. Visão Geral do Projeto
+## 1. Visão Geral do Projeto
 
 O objetivo é **prever a aprovação (`Loan_Approved`)** com base em informações financeiras e demográficas dos solicitantes, como renda, score de crédito, valor do empréstimo e endividamento.
 
@@ -17,7 +17,7 @@ O objetivo é **prever a aprovação (`Loan_Approved`)** com base em informaçõ
 
 ---
 
-## 📈 2. Resumo Estatístico
+## 2. Resumo Estatístico
 
 | Variável | Interpretação Estatística | Insight Analítico |
 |-----------|---------------------------|-------------------|
@@ -30,18 +30,18 @@ O objetivo é **prever a aprovação (`Loan_Approved`)** com base em informaçõ
 
 ---
 
-## ⚖️ 3. Distribuições e Perfil da Base
+## 3. Distribuições e Perfil da Base
 
 - **Loan_Approved** → 26% aprovados, 74% rejeitados ➜ base **desbalanceada**.  
 - **Gênero** → 62% homens, 38% mulheres.  
 - **Estado civil** → 64% casados.  
 - **Idade média** → 40 anos (intervalo 21–59).  
 
-💡 *Público predominantemente adulto, casado e de renda média, refletindo perfil de estabilidade financeira.*
+*Público predominantemente adulto, casado e de renda média, refletindo perfil de estabilidade financeira.*
 
 ---
 
-## 🔍 4. Correlações com Aprovação
+## 4. Correlações com Aprovação
 
 | Variável | Correlação | Interpretação |
 |-----------|-------------|---------------|
@@ -50,11 +50,11 @@ O objetivo é **prever a aprovação (`Loan_Approved`)** com base em informaçõ
 | **Applicant_Income** | +0.12 | Renda ajuda, mas não é fator decisivo isoladamente. |
 | **Loan_Amount** | -0.13 | Valores altos tendem a ser mais rejeitados. |
 
-✅ Nenhuma variável apresenta multicolinearidade (VIF < 2).
+Nenhuma variável apresenta multicolinearidade (VIF < 2).
 
 ---
 
-## ⚙️ 5. Pré-processamento
+## 5. Pré-processamento
 
 - **LabelEncoder** → variáveis binárias/ordinais (ex.: `Gender`, `Marital_Status`).  
 - **One-Hot Encoding** → variáveis nominais (ex.: `Loan_Purpose`, `Employer_Category`).  
@@ -63,7 +63,7 @@ O objetivo é **prever a aprovação (`Loan_Approved`)** com base em informaçõ
 
 ---
 
-## 🤖 6. Modelagem Preditiva
+## 6. Modelagem Preditiva
 
 Modelos treinados:
 - **Regressão Logística**
@@ -74,7 +74,7 @@ Cada modelo foi avaliado em termos de acurácia, precisão, recall, F1-score, AU
 
 ---
 
-## 📊 7. Desempenho dos Modelos
+## 7. Desempenho dos Modelos
 
 | Modelo | Acurácia | Precisão | Recall | F1 | Observações |
 |--------|-----------|-----------|--------|----|-------------|
@@ -84,7 +84,7 @@ Cada modelo foi avaliado em termos de acurácia, precisão, recall, F1-score, AU
 
 ---
 
-## 📈 8. Avaliação Detalhada
+## 8. Avaliação Detalhada
 
 | Métrica | Regressão Logística | SVM | Random Forest |
 |----------|----------------------|-----|----------------|
@@ -100,7 +100,7 @@ Cada modelo foi avaliado em termos de acurácia, precisão, recall, F1-score, AU
 
 ---
 
-## 🌡️ 9. Calibração e Curva ROC
+## 9. Calibração e Curva ROC
 
 - **Regressão Logística**: calibração quase perfeita, AUC = 0.91  
 - **SVM**: AUC = 0.93, AP = 0.85, leve subestimação em extremos  
@@ -108,7 +108,7 @@ Cada modelo foi avaliado em termos de acurácia, precisão, recall, F1-score, AU
 
 ---
 
-## 🌳 10. Importância das Variáveis (Random Forest)
+## 10. Importância das Variáveis (Random Forest)
 
 | Variável mais relevante | Impacto |
 |--------------------------|---------|
@@ -117,11 +117,11 @@ Cada modelo foi avaliado em termos de acurácia, precisão, recall, F1-score, AU
 | **Applicant_Income** | Renda ajuda, mas depende do score |
 | **Loan_Amount** | Empréstimos muito altos tendem à rejeição |
 
-📊 O modelo combina múltiplas dimensões de risco, sem depender apenas da renda.
+O modelo combina múltiplas dimensões de risco, sem depender apenas da renda.
 
 ---
 
-## 📚 11. Curva de Aprendizado
+## 11. Curva de Aprendizado
 
 - AUC de **validação estabiliza em 0.97–0.98** após ~200 observações.  
 - Gap mínimo entre treino e validação → **excelente generalização**.  
@@ -129,7 +129,7 @@ Cada modelo foi avaliado em termos de acurácia, precisão, recall, F1-score, AU
 
 ---
 
-## 🧩 12. Conclusão Geral
+## 12. Conclusão Geral
 
 | Objetivo | Modelo Ideal | Motivo |
 |-----------|---------------|--------|
@@ -137,12 +137,12 @@ Cada modelo foi avaliado em termos de acurácia, precisão, recall, F1-score, AU
 | **Explicabilidade e análise de risco** | **Regressão Logística** | Calibração e interpretabilidade |
 | **Triagem ampla (sensível)** | **SVM** | Recall elevado, cauteloso na aprovação |
 
-🔹 **Melhor modelo final:** `Random Forest`  
-🔹 **AUC = 0.96**, **F1 = 0.91**, **generalização excelente**  
+**Melhor modelo final:** `Random Forest`  
+**AUC = 0.96**, **F1 = 0.91**, **generalização excelente**  
 
 ---
 
-## 🧠 13. Próximos Passos
+## 13. Próximos Passos
 
 - Aplicar **SMOTE** ou `class_weight='balanced'` para lidar com o desbalanceamento.  
 - Testar **XGBoost ou LightGBM** para comparação.  
@@ -151,20 +151,8 @@ Cada modelo foi avaliado em termos de acurácia, precisão, recall, F1-score, AU
 
 ---
 
-## 🧾 Autor
-**Gepeto**  
-📍 UFSM — Departamento de Estatística  
-📧 Contato acadêmico / profissional  
-🔗 [LinkedIn / GitHub / Lattes – opcional]
-
----
-
-## 🧠 Tecnologias Principais
+## Tecnologias Principais
 - Python 3.13  
 - pandas, numpy, matplotlib, seaborn  
 - scikit-learn, statsmodels  
 - Jupyter Notebook
-
----
-
-> _“Modelos bem calibrados e interpretáveis são tão importantes quanto modelos precisos.”_
